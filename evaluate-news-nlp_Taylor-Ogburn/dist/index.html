@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Logo would go here if I wanted one here
+            </div>
+            <div class="">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h1 class="">Evaluate a news article with Natural Language Processing</h1>
+                <h2 class="">Try it out! Type in a "URL" below and see what Natural Language Processing can tell you!</h2>
+            </section>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="url" name="test-url" value=""  placeholder="Enter URL for a news article">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+                <section>
+                    <h2>Your results:</h2>
+                    <div id="results">
+                        <ul>
+                            <li>
+                                <h3>Text Polarity:</h3>
+                                <p id="polarity"></p>
+                                <h3>Confidence: </h3>
+                                <p id="polarity_confidence"></p>
+                            </li>
+        
+                            <li>
+                                <h3>Text Subjectivity:</h3>
+                                <p id="subjectivity"></p>
+                                <h3>Confidence: </h3>
+                                <p id="subjectivity_confidence"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+        </main>
+
+        <footer>
+            <p>Powered by: Aylient</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
